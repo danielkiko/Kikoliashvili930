@@ -1,0 +1,55 @@
+<div class="container-fluid mt-3 ml3">
+    <div>
+        <button class="btn btn-primary" (click)="linkToStudent()">Новый</button>
+        <div class="mt-3">
+            Группа
+            <select [(ngModel)]="group" (change)="fillterByGroup()" name="group" id="group" class="mt-2 w-25 rounded">
+                <option *ngFor="let group of groups" [ngValue]="group">{{group}}</option>
+            </select>
+        </div>
+        <div class="mt-3">
+            Специализация
+            <select [(ngModel)]="specialisation" (change)="fillterBySpecialisation()" name="group" id="group"
+                class="mt-2 rounded w-25">
+                <option *ngFor="let specialisation of specialisations" [ngValue]="specialisation">{{specialisation}}
+                </option>
+            </select>
+        </div>
+        <input class="mt-3 rounded" [(ngModel)]="searchSurname" (keypress)="fillterBySearch()" type="text"
+            id="searchSurname" placeholder="Фамилия">
+        <div>
+            <button class="btn btn-primary mt-2" (click)="resetFilter()">
+                Сброс сортировки
+            </button>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table w-100">
+            <thead>
+                <tr>
+                    <th scope="col">ФИО</th>
+                    <!-- <th scope="col">Фамилия</th>
+                    <th scope="col">Отчество</th> -->
+                    <th scope="col">Телефон</th>
+                    <th scope="col">Эмеил</th>
+                    <th scope="col">Дата рождения</th>
+                    <th scope="col">Группа</th>
+                    <th scope="col">Направление</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students" (click)="linkToStudent(student.id)">
+                    <td *ngIf="student.patronymic; else noSurName">{{ student.surname }} {{ student.name.charAt(0) }}. {{ student.patronymic.charAt(0) }}.</td>
+                    <ng-template #noSurName><td>{{ student.surname }} {{ student.name.charAt(0) }}.</td></ng-template>
+                    
+                    <!-- <td>{{ student.surname }}</td>
+                    <td>{{ student.patronymic }}</td> -->
+                    <td>{{ student.telephone }}</td>
+                    <td>{{ student.email }}</td>
+                    <td>{{ student.dateOfBirth }}</td>
+                    <td>{{ student.group }}</td>
+                    <td>{{ student.specialisation }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

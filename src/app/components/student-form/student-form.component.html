@@ -1,0 +1,60 @@
+<form [formGroup]="StudentForm">
+    <div class="container-fluid">
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Имя"
+                formControlName="name"
+                [ngClass]="{'has-error': StudentForm.get('name')?.invalid && StudentForm.get('name')?.touched}">
+            <small id="nameHelp" class="form-text text-muted">Обязательное поле только буквы</small>
+        </div>
+        <div class="form-group">
+            <label for="surname">Фамилия</label>
+            <input type="text" class="form-control" id="surname" placeholder="Фамилия" formControlName="surname"
+                [ngClass]="{'has-error': StudentForm.get('surname')?.invalid && StudentForm.get('surname')?.touched}">
+            <small id="surnameHelp" class="form-text text-muted">Обязательное поле только буквы</small>
+        </div>
+        <div class="form-group">
+            <label for="patronymic">Отчество</label>
+            <input type="text" class="form-control" id="patronymic" placeholder="Отчество" formControlName="patronymic">
+            <small id="patronymicHelp" class="form-text text-muted">Необязательное поле</small>
+        </div>
+        <div class="form-group">
+            <label for="telephone">Телефон</label>
+            <input type="tel" class="form-control" id="telephone" placeholder="Телефон" formControlName="telephone"
+                [ngClass]="{'has-error': StudentForm.get('telephone')?.invalid && StudentForm.get('telephone')?.touched}">
+            <small id="telephoneHelp" class="form-text text-muted">Обязательное поле номер телефона из 11-ти
+                цифр</small>
+        </div>
+        <div class="form-group">
+            <label for="email">Эмеил</label>
+            <input type="email" class="form-control" id="email" placeholder="Эмеил" formControlName="email"
+                [ngClass]="{'has-error': StudentForm.get('email')?.invalid && StudentForm.get('email')?.touched}">
+            <small id="emailHelp" class="form-text text-muted">Обязательное поле формат ivanov@mail.ru</small>
+        </div>
+        <div class="form-group">
+            <label for="dateOfBirth">Дата рождения</label>
+            <input type="date" class="form-control" id="dateOfBirth" placeholder="Дата рождения"
+                formControlName="dateOfBirth"
+                [ngClass]="{'has-error': StudentForm.get('dateOfBirth')?.invalid && StudentForm.get('dateOfBirth')?.touched}">
+            <small id="dateOfBirthHelp" class="form-text text-muted">Обязательное поле</small>
+        </div>
+        <div class="form-group">
+            <label for="group">Группа</label>
+            <input type="text" class="form-control" id="group" placeholder="Группа" formControlName="group"
+                [ngClass]="{'has-error': StudentForm.get('group')?.invalid && StudentForm.get('group')?.touched}">
+            <small id="groupHelp" class="form-text text-muted">Обязательное поле</small>
+        </div>
+        <div class="form-group">
+            <label for="specialisation">Направление подготовки</label>
+            <input type="text" class="form-control" id="specialisation" placeholder="Направление подготовки"
+                formControlName="specialisation"
+                [ngClass]="{'has-error': StudentForm.get('specialisation')?.invalid && StudentForm.get('specialisation')?.touched}">
+            <small id="specialisationHelp" class="form-text text-muted">Обязательное поле</small>
+        </div>
+
+        <button class="btn btn-primary mt-4 mb-2" [disabled]="StudentForm.invalid"
+            (click)="onAddStudent()">Сохранить</button>
+        <button class="btn btn-warning ms-2 mt-4 mb-2" *ngIf="id" (click)="onResetStudent()">Cбросить</button>
+        <button class="btn btn-danger ms-2 mt-4 mb-2" *ngIf="id" (click)="onDeleteStudent()">Удалить</button>
+    </div>
+</form>

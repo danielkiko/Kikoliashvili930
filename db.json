@@ -1,0 +1,70 @@
+{
+  "students": [
+    {
+      "name": "Даниэль",
+      "surname": "Киколиашвили",
+      "patronymic": "Зурабович",
+      "telephone": "88005553535",
+      "email": "danielkiko@yandex.ru",
+      "dateOfBirth": "2001-11-07",
+      "group": "191-325",
+      "specialisation": "Сапр",
+      "id": 1
+    },
+    {
+      "name": "ввв",
+      "surname": "вввв",
+      "patronymic": "ввв",
+      "telephone": "88005553333",
+      "email": "ddd@ddd.ru",
+      "dateOfBirth": "1111-11-11",
+      "group": "group",
+      "specialisation": "ввв",
+      "id": 3
+    },
+    {
+      "name": "Иван",
+      "surname": "Иванов",
+      "patronymic": "Ивановичx",
+      "telephone": "89266666666",
+      "email": "Ivanov@ivan.ru",
+      "dateOfBirth": "2001-01-01",
+      "group": "group",
+      "specialisation": "web",
+      "id": 4
+    },
+    {
+      "name": "dddddddddd",
+      "surname": "ddddddddddddd",
+      "patronymic": "ddddddddddddd",
+      "telephone": "86235948123",
+      "email": "ddddd@ddddddd.ru",
+      "dateOfBirth": "1111-11-11",
+      "group": "11111",
+      "specialisation": "ввв",
+      "id": 5
+    },
+    {
+      "name": "Пётр",
+      "surname": "Петров",
+      "patronymic": "Петрович",
+      "telephone": "89263032899",
+      "email": "ddddd@ddddd.ru",
+      "dateOfBirth": "1111-11-11",
+      "group": "111111111111111",
+      "specialisation": "сапр",
+      "id": 6
+    },
+    {
+      "name": "ddd",
+      "surname": "ddd",
+      "patronymic": null,
+      "telephone": "89263034836",
+      "email": "ddd@ddd.ru",
+      "dateOfBirth": "1111-11-11",
+      "group": "ddd",
+      "specialisation": "ddd",
+      "id": 7
+    }
+  ]
+}
