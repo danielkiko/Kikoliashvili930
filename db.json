@@ -56,15 +56,37 @@
       "id": 6
     },
     {
-      "name": "ddd",
-      "surname": "ddd",
+      "name": "dddcccc",
+      "surname": "dddcccc",
       "patronymic": null,
-      "telephone": "89263034836",
+      "telephone": "89535618479",
       "email": "ddd@ddd.ru",
       "dateOfBirth": "1111-11-11",
-      "group": "ddd",
-      "specialisation": "ddd",
+      "group": "dddcccc",
+      "specialisation": "dddcccc",
       "id": 7
+    },
+    {
+      "name": "wwww",
+      "surname": "sssss",
+      "patronymic": "aaaaa",
+      "telephone": "88888888888",
+      "email": "www@www.ru",
+      "dateOfBirth": "2222-11-11",
+      "group": "group",
+      "specialisation": "dddd",
+      "id": 8
+    },
+    {
+      "name": "name",
+      "surname": "surname",
+      "patronymic": null,
+      "telephone": "11111111111",
+      "email": "email@email.com",
+      "dateOfBirth": "2001-01-01",
+      "group": "191-991",
+      "specialisation": "сапр",
+      "id": 9
     }
   ]
 }
